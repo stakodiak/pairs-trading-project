@@ -1,7 +1,7 @@
 pairs-trading-project
 =====================
 
-Paper is [here](www.stoneridgetechnology.com/uploads/file/PairsTradingSRTWhitePaper.pdf). Finds correlated pairs of stocks from given exchange data suitable for pairs trading. 
+Paper is [here](http://www.stoneridgetechnology.com/uploads/file/PairsTradingSRTWhitePaper.pdf). Finds correlated pairs of stocks from given exchange data suitable for pairs trading. 
 
 Histogram of NYSE correlations:
 
