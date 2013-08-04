@@ -12,7 +12,7 @@
 
 #define DIRECTORY "data"
 
-/* Pair structure for priority queue */
+/* Pair struct for priority queue */
 struct Pair {
 Pair( int i, int j, float value ) :
 		i_(i), j_(j), metric(value) { }
@@ -42,7 +42,6 @@ class Stock {
 	int num_reversions;
 	float chi_square;
 public:
-	
 	Stock () { } 
 	Stock (char *name) {
 		ticker = (char*) malloc (5 * sizeof (char));
@@ -85,8 +84,8 @@ public:
 				is_crossed = (returns_array[i] >= mean);
 			}
 		}
-
 		variance = sum_squared_distances / (num_returns - 1);
+
 		/* Calculate SD */
 		SD = sqrt (variance);
 
@@ -107,17 +106,17 @@ public:
 	float return_at (int index) { 
 		if (index < 0 || index > num_returns)
 			return 0;
-		return returns_array[index]; }
+		return returns_array[index];
+    }
 
 	float std_dev () { return SD; }
 
 	float avg_return () { return mean; }
-
 };
 
 
 float get_corr (Stock s1, Stock s2) {
-
+    /* Calculates correlation between two stocks */
 	int num_returns = s1.get_returns();
 	float mean_A = s1.avg_return();
 	float mean_B = s2.avg_return();
@@ -125,20 +124,18 @@ float get_corr (Stock s1, Stock s2) {
 	for (int k = 0; k < num_returns; k++) 
 		sum_distances += (s1.return_at(k) - mean_A) * (s2.return_at(k) - mean_B);
 	float covar = sum_distances / (num_returns - 1);
-
 	float correlation = covar / (s1.std_dev() * s2.std_dev());
+
 	return correlation;
 }
+
 float get_chi (Stock s1, Stock s2) {
-
+    /* Calculates x^2 from correlation */
 	float correlation =  get_corr (s1, s2);
-
 	return s1.get_variance() *  (1.0 - correlation * correlation);
-
 }
 
 bool check_name (char *t1, char *t2) {
-	
 	/* If names are too similar */
 	if (t1[0] == t2[0])
 		if (t1[1] == t2[1])
@@ -237,7 +234,7 @@ int main () {
 	/* Print top 100 */
 	//printf ("\nTop 100 candidates: \n");
 	int count = 0;
-	while (count < 1000) {
+	while (count < 100) {
 		Pair p =  pq.top();
 		pq.pop();
 		char *t1 = stocks.at (p.i_).get_name();

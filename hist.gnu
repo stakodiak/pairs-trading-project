@@ -1,3 +1,4 @@
+# generates histogram from data file.
 # range
 min = .0
 max = .03
