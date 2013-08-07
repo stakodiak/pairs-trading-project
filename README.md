@@ -5,17 +5,17 @@ Paper is [here](http://www.stoneridgetechnology.com/uploads/file/PairsTradingSRT
 
 Histogram of NYSE correlations:
 
-![alt](https://rawgithub.com/stakodiak/pairs-trading-project/master/corr_histogram.svg)
+![alt](https://rawgithub.com/stakodiak/pairs-trading-project/master/plots/corr_histogram.svg)
 
 Good candidate pair:
 
-![alt](https://rawgithub.com/stakodiak/pairs-trading-project/master/pairs_low_chi_2.svg)
+![alt](https://rawgithub.com/stakodiak/pairs-trading-project/master/plots/pairs_low_chi_2.svg)
 
 No correlation:
 
-![alt](https://rawgithub.com/stakodiak/pairs-trading-project/master/pairs_high_chi_1.svg)
+![alt](https://rawgithub.com/stakodiak/pairs-trading-project/master/plots/pairs_high_chi_1.svg)
 
 Histogram of chi^2 values:
 
-![alt](https://rawgithub.com/stakodiak/pairs-trading-project/master/chi_histogram.svg)
+![alt](https://rawgithub.com/stakodiak/pairs-trading-project/master/plots/chi_histogram.svg)
 
